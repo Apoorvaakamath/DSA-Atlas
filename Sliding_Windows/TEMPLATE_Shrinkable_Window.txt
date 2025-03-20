@@ -1,0 +1,12 @@
+int i = 0, j = 0, ans = 0;
+for (; j < N; j++) { 
+    // Expand window by adding A[j] 
+    
+    while (invalid()) { // If window becomes invalid, shrink from left until it becomes valid
+        // Remove A[i] and move i forward
+        i++;
+    }
+    
+    ans = Math.max(ans, j - i + 1); // Update answer
+}
+return ans;
